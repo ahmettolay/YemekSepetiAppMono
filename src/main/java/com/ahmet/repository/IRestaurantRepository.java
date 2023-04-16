@@ -1,0 +1,15 @@
+package com.ahmet.repository;
+
+import com.ahmet.repository.entity.Product;
+import com.ahmet.repository.entity.Restaurant;
+import com.ahmet.repository.view.ViewRestaurantOrder;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface IRestaurantRepository extends JpaRepository<Restaurant, Long> {
+    public Boolean existsByAddress(String address);
+}
