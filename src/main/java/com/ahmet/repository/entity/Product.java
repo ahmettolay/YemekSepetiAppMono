@@ -24,6 +24,5 @@ public class Product {
     String category;
     @Min(value = 1,message = "ürün fiyatı 1'en düşük olamaz.")
     Double cost;
-    @NotBlank
     Long restaurantId;
 }
